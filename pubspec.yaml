@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^1.1.0
   get: ^4.6.6
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -75,11 +76,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: myfont
+    - family: myfont3
       fonts:
-        - asset: assets/fonts/Tajawal-Regular.ttf
-        - asset: assets/fonts/Tajawal-Medium.ttf
-        - asset: assets/fonts/Tajawal-Bold.ttf
+        - asset: assets/fonts/font2.ttf
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

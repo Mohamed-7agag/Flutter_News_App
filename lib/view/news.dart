@@ -17,18 +17,18 @@ class NewsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xffffffff),
-        foregroundColor: Colors.black,
+        foregroundColor: const Color(0xff3894a3),
         title: Text(
           category,
           style: const TextStyle(
-              fontFamily: 'myfont', fontSize: 26, fontWeight: FontWeight.bold),
+              fontFamily: 'myfont3', fontSize: 22, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: const EdgeInsets.only(bottom: 7,right: 7,left: 7),
+        padding: const EdgeInsets.only(bottom: 10, right: 7, left: 7),
         child: FutureBuilder(
           future: controller.getData(category),
           builder: (context, AsyncSnapshot snapshot) {
@@ -71,12 +71,14 @@ class NewsScreen extends StatelessWidget {
                           height: 12,
                         ),
                         Text(
+                          maxLines: 2,
                           data.articles[index].title.toString(),
                           style: const TextStyle(
                               color: Colors.black,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'myfont'),
+                              fontSize: 16,
+                              overflow: TextOverflow.ellipsis,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'myfont3'),
                         ),
                       ],
                     ),
@@ -86,7 +88,7 @@ class NewsScreen extends StatelessWidget {
             } else {
               return const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.black,
+                  color: Color(0xff3894a3),
                 ),
               );
             }

@@ -8,12 +8,12 @@ class CategoryScreen extends StatelessWidget {
 
   List<String> category = [
     "business",
-    "entertainment",
     "general",
     "health",
     "science",
     "sports",
     "technology",
+    "entertainment",
   ];
 
   @override
@@ -32,10 +32,10 @@ class CategoryScreen extends StatelessWidget {
             const Text(
               "Choose A Category Of News",
               style: TextStyle(
-                  fontFamily: 'myfont',
-                  fontSize: 29,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold),
+                  fontFamily: 'myfont3',
+                  fontSize: 25,
+                  color: Color(0xff3894a3),
+                  fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,
             ),
             const SizedBox(
@@ -67,10 +67,10 @@ class CategoryScreen extends StatelessWidget {
                       child: Text(
                         category[index],
                         style: const TextStyle(
-                            fontFamily: 'myfont',
-                            fontSize: 24,
+                            fontFamily: 'myfont3',
+                            fontSize: 22,
                             color: Colors.black,
-                            fontWeight: FontWeight.w500),
+                            fontWeight: FontWeight.w500,),
                       ),
                     ),
                   );
