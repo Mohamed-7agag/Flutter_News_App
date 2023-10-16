@@ -7,12 +7,12 @@ class CategoryScreen extends StatelessWidget {
   CategoryScreen({super.key});
 
   List<String> category = [
-    "business",
+    "sports",
+    "technology",
     "general",
     "health",
     "science",
-    "sports",
-    "technology",
+    "business",
     "entertainment",
   ];
 
@@ -43,13 +43,14 @@ class CategoryScreen extends StatelessWidget {
             ),
             SizedBox(
               width: double.infinity,
-              height: 600,
+              height: 650,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisSpacing: 20,
                     mainAxisSpacing: 20,
                     crossAxisCount: 2,
-                    mainAxisExtent: 120),
+                    mainAxisExtent: 130,
+                    ),
                 itemCount: category.length,
                 itemBuilder: (BuildContext context, int index) {
                   return InkWell(
@@ -59,18 +60,19 @@ class CategoryScreen extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey[300],
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: const [
-                            BoxShadow(color: Colors.black12, blurRadius: 3)
+                            // BoxShadow(color: Colors.grey, blurRadius: 3)
                           ]),
                       child: Text(
                         category[index],
                         style: const TextStyle(
-                            fontFamily: 'myfont3',
-                            fontSize: 22,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,),
+                          fontFamily: 'myfont3',
+                          fontSize: 21,
+                          color: Color(0xff000000),
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                   );

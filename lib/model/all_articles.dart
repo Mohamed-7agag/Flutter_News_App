@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 Articles articlesFromJson(String str) => Articles.fromJson(json.decode(str));
@@ -29,12 +28,13 @@ class Article {
   dynamic description;
   String url;
   dynamic urlToImage;
-  Article({
-    required this.title,
-    required this.description,
-    required this.url,
-    required this.urlToImage,
-  });
+  String publishedAt;
+  Article(
+      {required this.title,
+      required this.description,
+      required this.url,
+      required this.urlToImage,
+      required this.publishedAt});
 
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
@@ -42,6 +42,7 @@ class Article {
       description: json["description"] == null ? null : json['description'],
       url: json["url"],
       urlToImage: json["urlToImage"],
+      publishedAt: json['publishedAt'],
     );
   }
 
