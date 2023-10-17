@@ -33,7 +33,7 @@ class CategoryScreen extends StatelessWidget {
               "Choose A Category Of News",
               style: TextStyle(
                   fontFamily: 'myfont3',
-                  fontSize: 25,
+                  fontSize: 20,
                   color: Color(0xff3894a3),
                   fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,
@@ -60,7 +60,7 @@ class CategoryScreen extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                          color: Colors.grey[300],
+                          color: const Color.fromARGB(255, 234, 233, 233),
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: const [
                             // BoxShadow(color: Colors.grey, blurRadius: 3)
@@ -69,7 +69,7 @@ class CategoryScreen extends StatelessWidget {
                         category[index],
                         style: const TextStyle(
                           fontFamily: 'myfont3',
-                          fontSize: 21,
+                          fontSize: 16,
                           color: Color(0xff000000),
                           fontWeight: FontWeight.w500,
                         ),

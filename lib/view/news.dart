@@ -23,14 +23,14 @@ class NewsScreen extends StatelessWidget {
         title: Text(
           category,
           style: const TextStyle(
-              fontFamily: 'myfont3', fontSize: 23, fontWeight: FontWeight.bold),
+              fontFamily: 'myfont3', fontSize: 20, fontWeight: FontWeight.w500),
         ),
         centerTitle: true,
       ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: const EdgeInsets.only(bottom: 10, right: 7, left: 7),
+        padding: const EdgeInsets.only(bottom: 10, right: 7, left: 7,top: 0),
         child: FutureBuilder(
           future: controller.getData(category),
           builder: (context, AsyncSnapshot snapshot) {
@@ -57,12 +57,12 @@ class NewsScreen extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.all(8),
                       margin:
-                          const EdgeInsets.only(bottom: 15, right: 4, left: 4),
+                          const EdgeInsets.only(bottom: 10, right: 4, left: 4,top: 5),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: Colors.white,
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 4.0)
+                            BoxShadow(color: Colors.black12, blurRadius: 3.0)
                           ]),
                       child: Column(
                         children: [
@@ -80,8 +80,7 @@ class NewsScreen extends StatelessWidget {
                                     )
                                   : CachedNetworkImage(
                                       placeholder: (context, url) => Container(
-                                            color: const Color.fromARGB(
-                                                255, 211, 211, 211),
+                                            color: Color.fromARGB(255, 224, 224, 224),
                                           ),
                                       fit: BoxFit.cover,
                                       imageUrl: data.articles[index].urlToImage
@@ -96,7 +95,7 @@ class NewsScreen extends StatelessWidget {
                             data.articles[index].title.toString(),
                             style: const TextStyle(
                                 color: Colors.black,
-                                fontSize: 16,
+                                fontSize: 15.0,
                                 overflow: TextOverflow.ellipsis,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: 'myfont3'),
