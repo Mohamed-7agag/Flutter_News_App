@@ -58,7 +58,7 @@ class NewsDetail extends StatelessWidget {
                     title,
                     style: const TextStyle(
                         fontFamily: 'myfont3',
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(
@@ -68,7 +68,7 @@ class NewsDetail extends StatelessWidget {
                     "PublishedAt : $date",
                     style: TextStyle(
                         fontFamily: 'myfont3',
-                        fontSize: 15,
+                        fontSize: 14,
                         color: Colors.grey[900]),
                   ),
                   const SizedBox(
@@ -78,7 +78,7 @@ class NewsDetail extends StatelessWidget {
                     desc,
                     style: TextStyle(
                         fontFamily: 'myfont3',
-                        fontSize: 16,
+                        fontSize: 15,
                         color: Colors.grey[700]),
                   )
                 ],

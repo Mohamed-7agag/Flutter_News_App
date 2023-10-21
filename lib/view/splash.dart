@@ -13,7 +13,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(const Duration(milliseconds: 3500), () {
+    Timer(const Duration(milliseconds: 1200), () {
       Get.off(() => CategoryScreen());
     });
     super.initState();
@@ -30,7 +30,10 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("assets/images/icon.png",width: 80,),
+            Image.asset(
+              "assets/images/icon.png",
+              width: 80,
+            ),
             const SizedBox(
               height: 15,
             ),

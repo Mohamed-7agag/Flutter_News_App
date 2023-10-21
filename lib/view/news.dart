@@ -18,6 +18,7 @@ class NewsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        elevation: 1.5,
         backgroundColor: const Color(0xffffffff),
         foregroundColor: const Color(0xff3894a3),
         title: Text(
@@ -30,7 +31,7 @@ class NewsScreen extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: const EdgeInsets.only(bottom: 10, right: 7, left: 7,top: 0),
+        padding: const EdgeInsets.only(bottom: 10, right: 7, left: 7, top: 0),
         child: FutureBuilder(
           future: controller.getData(category),
           builder: (context, AsyncSnapshot snapshot) {
@@ -56,8 +57,8 @@ class NewsScreen extends StatelessWidget {
                     },
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      margin:
-                          const EdgeInsets.only(bottom: 10, right: 4, left: 4,top: 5),
+                      margin: const EdgeInsets.only(
+                          bottom: 10, right: 4, left: 4, top: 5),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: Colors.white,
@@ -80,7 +81,8 @@ class NewsScreen extends StatelessWidget {
                                     )
                                   : CachedNetworkImage(
                                       placeholder: (context, url) => Container(
-                                            color: Color.fromARGB(255, 224, 224, 224),
+                                            color: const Color.fromARGB(
+                                                255, 224, 224, 224),
                                           ),
                                       fit: BoxFit.cover,
                                       imageUrl: data.articles[index].urlToImage
@@ -95,7 +97,7 @@ class NewsScreen extends StatelessWidget {
                             data.articles[index].title.toString(),
                             style: const TextStyle(
                                 color: Colors.black,
-                                fontSize: 15.0,
+                                fontSize: 14.0,
                                 overflow: TextOverflow.ellipsis,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: 'myfont3'),
